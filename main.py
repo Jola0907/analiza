@@ -74,3 +74,21 @@ print("\nWyniki testu Kruskala-Wallisa:")
 for col, (stat, p) in kruskal_results.items():
     print(f"{col}: Statystyka H = {stat:.4f}, Wartość p = {p:.4f}")
 
+import sympy as sp
+
+# Definicja zmiennych
+x, y = sp.symbols('x y')
+
+# Funkcja przed przekształceniem
+f1 = 9 * x**4 - y**4 + 2 * y**2
+
+# Funkcja po przekształceniu
+f2 = (3 * x**2 - y**2 + 1) * (3 * x**2 + y**2 - 1) + 1
+
+# Podstawienie wartości x=40545, y=70226
+f1_val = f1.subs({x: 40545, y: 70226})
+f2_val = f2.subs({x: 40545, y: 70226})
+
+# Wyświetlenie wyników
+print(f"Funkcja 1: {f1_val}")
+print(f"Funkcja 2: {f2_val}")
