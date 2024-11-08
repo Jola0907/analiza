@@ -73,5 +73,3 @@ for col, (stat, p) in normality_results.items():
 print("\nWyniki testu Kruskala-Wallisa:")
 for col, (stat, p) in kruskal_results.items():
     print(f"{col}: Statystyka H = {stat:.4f}, Wartość p = {p:.4f}")
-
-
